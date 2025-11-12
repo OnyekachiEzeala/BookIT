@@ -1,4 +1,4 @@
-BookIt API
+📘 BookIt API
 
 A production-ready REST API built with FastAPI for a simple booking platform — BookIt.
 Users can browse services, make bookings, and leave reviews, while admins can manage users, services, and bookings.
@@ -37,7 +37,7 @@ Contributors
 
 License
 
-Project Overview
+🧠 Project Overview
 
 BookIt API provides an efficient way to manage bookings for various services.
 
@@ -45,35 +45,35 @@ Key Functionalities:
 
 Users can:
 
-    Register, login, and manage their accounts.
+Register, login, and manage their accounts.
 
-    Book available services and leave reviews.
+Book available services and leave reviews.
 
 Admins can:
 
-    Manage users and services.
+Manage users and services.
 
-    View and update bookings.
+View and update bookings.
 
-    Moderate reviews.
+Moderate reviews.
 
 The API enforces role-based permissions and returns appropriate HTTP status codes for every operation.
 
-Architecture & Design Decisions
+🏗️ Architecture & Design Decisions
 
-Framework: FastAPI was chosen for its asynchronous capabilities, data validation (Pydantic), and built-in docs (Swagger/Redoc).
+Framework: FastAPI – chosen for its asynchronous capabilities, data validation (Pydantic), and built-in docs (Swagger/Redoc).
 
 Architecture Pattern: Layered architecture separating:
 
-    routers/ → API route handlers
+routers/ → API route handlers
 
-    schemas/ → Pydantic models for request/response validation
+schemas/ → Pydantic models for request/response validation
 
-    services/ → Business logic and data processing
+services/ → Business logic and data processing
 
-    models/ → SQLAlchemy ORM models
+models/ → SQLAlchemy ORM models
 
-    core/ → Security, database, and utilities
+core/ → Configuration, database, and security utilities
 
 Authentication: JWT-based (Access + Refresh tokens)
 
@@ -83,139 +83,135 @@ Security: Passwords hashed with bcrypt
 
 Migrations: Managed with Alembic
 
-Deployment: Configurable via environment variables and ready for production deployment on Render
+Deployment: Configurable via environment variables and ready for production deployment on PipeOps
 
-Tech Stack
-| Layer | Technology |
+⚙️ Tech Stack
+| Layer            | Technology            |
 | ---------------- | --------------------- |
-| Language | Python 3.11+ |
-| Framework | FastAPI |
-| Database | PostgreSQL |
-| ORM | SQLAlchemy |
-| Migrations | Alembic |
-| Authentication | JWT (via python-jose) |
-| Password Hashing | bcrypt |
-| Deployment | Render |
-| Testing | Pytest |
+| Language         | Python 3.11+          |
+| Framework        | FastAPI               |
+| Database         | PostgreSQL            |
+| ORM              | SQLAlchemy            |
+| Migrations       | Alembic               |
+| Authentication   | JWT (via python-jose) |
+| Password Hashing | bcrypt                |
+| Deployment       | PipeOps / Render      |
+| Testing          | Pytest                |
 
-Database Choice & Justification
+🗄️ Database Choice & Justification
 
 PostgreSQL was selected because it provides:
 
-    Strong relational integrity between users, services, and bookings.
+Strong relational integrity between users, services, and bookings.
 
-    Support for advanced constraints (e.g., unique and foreign keys) that prevent invalid data (like overlapping bookings).
+Support for advanced constraints (e.g., unique and foreign keys) that prevent invalid data (like overlapping bookings).
 
-    Excellent support with SQLAlchemy and Alembic migrations.
+Excellent support with SQLAlchemy and Alembic migrations.
 
-    ACID compliance — ensuring data consistency even during concurrent operations.
+ACID compliance — ensuring data consistency even during concurrent operations.
 
-Features
+✨ Features
 
-User registration, login, and logout
-JWT authentication (Access + Refresh)
-Role-based access control
-CRUD operations for services, bookings, and reviews
-Booking conflict prevention
-Structured logging
-Auto-generated API documentation
-Environment-based configuration for production readiness
+✅ User registration, login, and logout
+✅ JWT authentication (Access + Refresh)
+✅ Role-based access control
+✅ CRUD operations for services, bookings, and reviews
+✅ Booking conflict prevention
+✅ Structured logging
+✅ Auto-generated API documentation
+✅ Environment-based configuration for production readiness
 
-Project Structure
-
+🧩 Project Structure
 BOOKIT/
 │
-├── alembic/ # Database migration folder
+├── alembic/                     # Database migration folder
 │
 ├── app/
-│ ├── routers/ # Route handlers (API endpoints)
-│ │ ├── **init**.py
-│ │ ├── auth.py
-│ │ ├── bookings.py
-│ │ ├── reviews.py
-│ │ ├── services.py
-│ │ └── users.py
-│ │
-│ ├── schemas/ # Pydantic models for request/response validation
-│ │ ├── **init**.py
-│ │ ├── auth.py
-│ │ ├── bookings.py
-│ │ ├── reviews.py
-│ │ ├── services.py
-│ │ └── users.py
-│ │
-│ ├── services/ # Business logic and CRUD operations
-│ │ ├── **init**.py
-│ │ ├── auth.py
-│ │ ├── bookings.py
-│ │ ├── reviews.py
-│ │ ├── services.py
-│ │ └── users.py
-│ │
-│ ├── utils/ # Utility and core helper modules
-│ │ ├── **init**.py
-│ │ └── enums.py
-│ │
-│ ├── **init**.py # SQLAlchemy ORM models
-│ ├── database.py # Application entry point
-│ └── logger.py  
-│ ├── main.py  
-│ └── models.py  
-│ ├── requirements.txt # Project dependencies
-│ └── security.py  
+│   ├── routers/                 # Route handlers (API endpoints)
+│   │   ├── __init__.py
+│   │   ├── auth.py
+│   │   ├── bookings.py
+│   │   ├── reviews.py
+│   │   ├── services.py
+│   │   └── users.py
+│   │
+│   ├── schemas/                 # Pydantic models for request/response validation
+│   │   ├── __init__.py
+│   │   ├── auth.py
+│   │   ├── bookings.py
+│   │   ├── reviews.py
+│   │   ├── services.py
+│   │   └── users.py
+│   │
+│   ├── services/                # Business logic and CRUD operations
+│   │   ├── __init__.py
+│   │   ├── auth.py
+│   │   ├── bookings.py
+│   │   ├── reviews.py
+│   │   ├── services.py
+│   │   └── users.py
+│   │
+│   ├── utils/                   # Utility and core helper modules
+│   │   ├── __init__.py
+│   │   ├── database.py
+│   │   ├── logger.py
+│   │   └── security.py
+│   │
+│   ├── models.py                # SQLAlchemy ORM models
+│   ├── main.py                  # Application entry point
+│   └── __init__.py
 │
-├── .env # Environment configuration file
-├── .gitignore # Git ignore rules
-├── alembic.ini # Alembic configuration file
-├── app.log # Application log file  
-├── README.md # Project documentation
-└── venv/ # Virtual environment
+├── .env                         # Environment configuration file
+├── .gitignore                   # Git ignore rules
+├── alembic.ini                  # Alembic configuration file
+├── app.log                      # Application log file
+├── requirements.txt             # Project dependencies
+├── README.md                    # Project documentation
+└── venv/                        # Virtual environment
 
-Setup & Installation
 
-1️ Clone the repository
+🧰 Setup & Installation
+1️⃣ Clone the repository
 git clone https://github.com/OnyekachiEzeala/BookIT.git
 cd BookIT
 
-2️ Create and activate a virtual environment
-
+2️⃣ Create and activate a virtual environment
 python -m venv venv
-source venv/bin/activate # For macOS/Linux
-venv\Scripts\activate # For Windows
+source venv/bin/activate     # For macOS/Linux
+venv\Scripts\activate        # For Windows
 
-3️ Install dependencies
-
+3️⃣ Install dependencies
 pip install -r requirements.txt
 
-4️ Create the database
+4️⃣ Create the database
 
 Create a PostgreSQL database named bookit_db.
 
-5️ Apply migrations
-
+5️⃣ Apply migrations
 alembic upgrade head
 
-Environment Variables
+⚙️ Environment Variables
 
 Create a .env file in the root directory with the following keys:
 
 | Variable                       | Description                | Example                                                   |
 | ------------------------------ | -------------------------- | --------------------------------------------------------- |
-| `DATABASE_URL`                 | PostgreSQL database URL    | `postgresql+psycopg2://user:password@localhost/bookit_db` |
+| `DATABASE_URL`                 | PostgreSQL database URL    | `postgresql://user:password@localhost/bookit_db` |
 | `SECRET_KEY`                   | Secret key for JWT signing | `super_secret_key_here`                                   |
 | `ALGORITHM`                    | JWT algorithm              | `HS256`                                                   |
 | `ACCESS_TOKEN_EXPIRE_MINUTES`  | Access token validity      | `30`                                                      |
 | `REFRESH_TOKEN_EXPIRE_MINUTES` | Refresh token validity     | `60`                                                      |
 | `APP_ENV`                      | Environment mode           | `development` / `production`                              |
 
-Running the Application
+🚀 Running the Application
 Run locally with Uvicorn:
 uvicorn app.main:app --reload
 
-Visit the API at
-http://127.0.0.1:8000
 
-API Documentation
+Visit the API at
+👉 http://127.0.0.1:8000
+
+📚 API Documentation
 
 Auto-generated documentation is available at:
 
@@ -223,40 +219,58 @@ Swagger UI: http://127.0.0.1:8000/docs
 
 Redoc: http://127.0.0.1:8000/redoc
 
-Deployment
-Deployed to Render for production hosting.
-| Item | URL |
+🌐 Deployment
+
+Deployed to PipeOps for production hosting.
+
+| Item          | URL                                   |
 | ------------- | ------------------------------------- |
+| **Base URL**  | `https://bookit-api.pipeops.app`      |
+| **Live Docs** | `https://bookit-api.pipeops.app/docs` |
 
-<!-- | **Base URL**  | `https://bookit-api.pipeops.app`      | -->
-<!-- | **Live Docs** | `https://bookit-api.pipeops.app/docs` | -->
 
-<!-- Environment variables and secrets are managed through the PipeOps dashboard. -->
+Environment variables and secrets are managed through the PipeOps dashboard.
 
-Endpoints Overview
-| Method | Endpoint | Description | Access |
+🧪 Testing
+
+Run tests using pytest:
+
+pytest -v
+
+Tests made
+
+✅ Authentication flow (register, login, refresh, unauthorized access)
+
+✅ Booking conflict logic (prevent overlapping bookings)
+
+✅ Permissions (user vs admin routes)
+
+✅ Happy & unhappy paths with correct status codes
+
+🔗 Endpoints Overview
+| Method   | Endpoint                 | Description               | Access        |
 | -------- | ------------------------ | ------------------------- | ------------- |
-| `POST` | `/auth/register` | Register new user | Public |
-| `POST` | `/auth/login` | Login user | Public |
-| `POST` | `/auth/refresh` | Refresh token | Authenticated |
-| `POST` | `/auth/logout` | Logout user | Authenticated |
-| `GET` | `/me` | Get current user profile | Authenticated |
-| `PATCH` | `/me` | Update profile | Authenticated |
-| `GET` | `/services` | List available services | Public |
-| `POST` | `/services` | Create service | Admin |
-| `PATCH` | `/services/{id}` | Update service | Admin |
-| `DELETE` | `/services/{id}` | Delete service | Admin |
-| `POST` | `/bookings` | Create booking | User |
-| `GET` | `/bookings` | View bookings | User/Admin |
-| `PATCH` | `/bookings/{id}` | Update/reschedule booking | Owner/Admin |
-| `DELETE` | `/bookings/{id}` | Delete booking | Owner/Admin |
-| `POST` | `/reviews` | Add review | User |
-| `GET` | `/services/{id}/reviews` | Get service reviews | Public |
+| `POST`   | `/auth/register`         | Register new user         | Public        |
+| `POST`   | `/auth/login`            | Login user                | Public        |
+| `POST`   | `/auth/refresh`          | Refresh token             | Authenticated |
+| `POST`   | `/auth/logout`           | Logout user               | Authenticated |
+| `GET`    | `/me`                    | Get current user profile  | Authenticated |
+| `PATCH`  | `/me`                    | Update profile            | Authenticated |
+| `GET`    | `/services`              | List available services   | Public        |
+| `POST`   | `/services`              | Create service            | Admin         |
+| `PATCH`  | `/services/{id}`         | Update service            | Admin         |
+| `DELETE` | `/services/{id}`         | Delete service            | Admin         |
+| `POST`   | `/bookings`              | Create booking            | User          |
+| `GET`    | `/bookings`              | View bookings             | User/Admin    |
+| `PATCH`  | `/bookings/{id}`         | Update/reschedule booking | Owner/Admin   |
+| `DELETE` | `/bookings/{id}`         | Delete booking            | Owner/Admin   |
+| `POST`   | `/reviews`               | Add review                | User          |
+| `GET`    | `/services/{id}/reviews` | Get service reviews       | Public        |
 
-Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change
+🤝 Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Contact
+📫 Contact
 For any questions or support:
 
 Email: ezesam227@gmail.com
