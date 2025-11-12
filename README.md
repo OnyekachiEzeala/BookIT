@@ -257,13 +257,15 @@ pytest -v
 
 ---
 
-🤝 Contributing
+## 🤝 Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ---
 
-📫 Contact
+## 📫 Contact
+
 For any questions or support:
 
-Email: ezesam227@gmail.com
-GitHub: OnyekachiEzeala
+* Email: [ezesam227@gmail.com](mailto:ezesam227@gmail.com)
+* GitHub: OnyekachiEzeala
