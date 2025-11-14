@@ -1177,3 +1177,5 @@ services.py 2025-11-11 17:50:25,998 - app.routers.services -INFO - Admin test1up
 services.py 2025-11-11 17:50:26,011 - app.routers.services -INFO - Service with ID 01K9SQS5NEBW5M25N016WV74K6 deleted successfully
 auth.py 2025-11-11 21:23:16,360 - app.routers.auth -INFO - User login attempt: test1update@example.com
 auth.py 2025-11-11 21:23:17,953 - app.routers.auth -INFO - User logged in successfully with email: test1update@example.com
+auth.py 2025-11-13 17:55:29,281 - app.routers.auth -INFO - Attempting to register user with email: test1@example.com
+auth.py 2025-11-13 17:55:30,003 - app.routers.auth -INFO - User registered successfully with email: test1@example.com

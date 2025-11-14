@@ -2,7 +2,6 @@ from sqlalchemy.orm import Session
 from app.schemas.users import UserUpdate
 from app import models
 from app.security import get_current_user, get_password_hash
-from fastapi import Depends
 from app.logger import get_logger
 import os
 from dotenv import load_dotenv

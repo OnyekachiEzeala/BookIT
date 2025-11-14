@@ -11,7 +11,7 @@ logger = get_logger(__name__)
 
 app = FastAPI(
     title="BookIT API",
-    description="A secure Booking platform API with JWT authentication and rate limiting",
+    description="A secure Booking platform API with JWT authentication and Role Based Access Control (RBAC)",
     version="1.0.0",
 )
 

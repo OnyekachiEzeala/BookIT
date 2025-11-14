@@ -68,7 +68,7 @@ The API enforces **role-based permissions** and returns appropriate **HTTP statu
 | Migrations       | Alembic               |
 | Authentication   | JWT (via python-jose) |
 | Password Hashing | bcrypt                |
-| Deployment       | PipeOps / Render      |
+| Deployment       | Render                |
 | Testing          | Pytest                |
 
 ---
@@ -211,10 +211,10 @@ Auto-generated documentation is available at:
 ## 🌐 Deployment
 Deployed to **Render** for production hosting.
 
-| Item          | URL                                   |
-| ------------- | ------------------------------------- |
-| **Base URL**  | `https://bookit-api.render.app`      |
-| **Live Docs** | `https://bookit-api.render.app/docs` |
+| Item          | URL                                         |
+| ------------- | ------------------------------------------- |
+| **Base URL**  | `https://bookit-api-5etn.onrender.com`      |
+| **Live Docs** | `https://bookit-api-5etn.onrender.com/docs` |
 
 Environment variables and secrets are managed through the Render dashboard.
 
